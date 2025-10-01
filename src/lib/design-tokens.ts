@@ -1,100 +1,70 @@
 /**
- * Smart Road Design System Tokens
+ * Smart Road Design System Tokens V1.0
  * 
  * 이 파일은 Smart Road 프로젝트의 디자인 시스템 토큰을 정의합니다.
  * KOREATECH 학생들을 위한 지능형 학습·경력 관리 플랫폼의 브랜드 아이덴티티를 반영합니다.
+ * 
+ * 브랜드 핵심 가치: '성장', '신뢰', '내비게이션'
+ * 슬로건: "데이터로 밝히는 너의 커리어 여정"
  */
 
 // ============================================================================
-// COLOR PALETTE
+// COLOR PALETTE - KOREATECH Blue 기반
 // ============================================================================
 
 /**
- * Primary Colors - 메인 브랜드 컬러
- * 신뢰성과 전문성을 강조하는 블루 계열
+ * Primary Colors - KOREATECH Blue
+ * 신뢰성과 기술 전문성을 나타내는 메인 컬러
  */
 export const primaryColors = {
-  50: '#eff6ff',   // 매우 연한 블루
-  100: '#dbeafe',  // 연한 블루
-  200: '#bfdbfe',  // 중간 연한 블루
-  300: '#93c5fd',  // 중간 블루
-  400: '#60a5fa',  // 중간 진한 블루
-  500: '#3b82f6',  // 메인 블루 (Primary)
-  600: '#2563eb',  // 진한 블루
-  700: '#1d4ed8',  // 매우 진한 블루
-  800: '#1e40af',  // 어두운 블루
-  900: '#1e3a8a',  // 가장 어두운 블루
+  50: '#DEEBFF',   // 매우 연한 블루
+  100: '#B3D4FF',  // 연한 블루
+  200: '#4C9AFF',  // 중간 연한 블루
+  300: '#4C9AFF',  // 중간 블루
+  400: '#0065FF',  // 중간 진한 블루
+  500: '#0052CC',  // 메인 블루 (KOREATECH Blue)
+  600: '#0052CC',  // 진한 블루
+  700: '#003D99',  // 매우 진한 블루
+  800: '#002966',  // 어두운 블루
+  900: '#001A4D',  // 가장 어두운 블루
 } as const;
 
 /**
- * Secondary Colors - 보조 브랜드 컬러
- * 성장과 발전을 상징하는 그린 계열
- */
-export const secondaryColors = {
-  50: '#f0fdf4',   // 매우 연한 그린
-  100: '#dcfce7',  // 연한 그린
-  200: '#bbf7d0',  // 중간 연한 그린
-  300: '#86efac',  // 중간 그린
-  400: '#4ade80',  // 중간 진한 그린
-  500: '#22c55e',  // 메인 그린 (Secondary)
-  600: '#16a34a',  // 진한 그린
-  700: '#15803d',  // 매우 진한 그린
-  800: '#166534',  // 어두운 그린
-  900: '#14532d',  // 가장 어두운 그린
-} as const;
-
-/**
- * Accent Colors - 강조 컬러
- * 주의와 중요성을 나타내는 오렌지 계열
- */
-export const accentColors = {
-  50: '#fff7ed',   // 매우 연한 오렌지
-  100: '#ffedd5',  // 연한 오렌지
-  200: '#fed7aa',  // 중간 연한 오렌지
-  300: '#fdba74',  // 중간 오렌지
-  400: '#fb923c',  // 중간 진한 오렌지
-  500: '#f97316',  // 메인 오렌지 (Accent)
-  600: '#ea580c',  // 진한 오렌지
-  700: '#c2410c',  // 매우 진한 오렌지
-  800: '#9a3412',  // 어두운 오렌지
-  900: '#7c2d12',  // 가장 어두운 오렌지
-} as const;
-
-/**
- * Grayscale Colors - 그레이스케일
- * 텍스트와 배경에 사용되는 중성 컬러
+ * Grayscale - 명확한 정보 전달을 위한 그레이스케일
+ * 체계적인 정보 위계를 표현
  */
 export const grayscaleColors = {
-  50: '#fafafa',   // 거의 흰색
-  100: '#f5f5f5',  // 매우 연한 그레이
-  200: '#e5e5e5',  // 연한 그레이
-  300: '#d4d4d4',  // 중간 연한 그레이
-  400: '#a3a3a3',  // 중간 그레이
-  500: '#737373',  // 중간 진한 그레이
-  600: '#525252',  // 진한 그레이
-  700: '#404040',  // 매우 진한 그레이
-  800: '#262626',  // 어두운 그레이
-  900: '#171717',  // 가장 어두운 그레이
-  950: '#0a0a0a',  // 거의 검은색
+  50: '#F4F5F7',   // Background
+  100: '#F4F5F7',  // Background
+  200: '#DFE1E6',  // Borders
+  300: '#DFE1E6',  // Borders
+  400: '#7A869A',  // Placeholder
+  500: '#7A869A',  // Placeholder
+  600: '#42526E',  // Body Text
+  700: '#42526E',  // Body Text
+  800: '#172B4D',  // Headings
+  900: '#172B4D',  // Headings
 } as const;
 
 /**
- * Semantic Colors - 의미적 컬러
- * 상태와 피드백을 나타내는 컬러
+ * System Colors - 목적별 시스템 컬러
+ * 명확한 상태 표현을 위한 컬러
  */
-export const semanticColors = {
-  success: secondaryColors[500],
-  warning: accentColors[500],
-  error: '#ef4444',    // Red-500
-  info: primaryColors[500],
+export const systemColors = {
+  success: '#00875A',   // 성공, 완료
+  warning: '#FFAB00',   // 주의, 경고
+  danger: '#DE350B',    // 오류, 위험
+  accent: '#FFAB00',    // 강조, 포인트 컬러
 } as const;
+
 
 // ============================================================================
 // TYPOGRAPHY
 // ============================================================================
 
 /**
- * Font Families
+ * Font Families - Pretendard 기반
+ * 가독성이 뛰어난 한글 폰트 사용
  */
 export const fontFamilies = {
   sans: [
@@ -130,137 +100,102 @@ export const fontFamilies = {
 };
 
 /**
- * Font Sizes - 타이포그래피 스케일
- * 1.125 (18px) 배수 기반의 모듈러 스케일
+ * Typography Scale - 역할별 타이포그래피
+ * 명확한 정보 전달을 위한 체계적인 타이포그래피
  */
-export const fontSizes = {
-  xs: '0.75rem',      // 12px
-  sm: '0.875rem',     // 14px
-  base: '1rem',       // 16px
-  lg: '1.125rem',     // 18px
-  xl: '1.25rem',      // 20px
-  '2xl': '1.5rem',    // 24px
-  '3xl': '1.875rem',  // 30px
-  '4xl': '2.25rem',   // 36px
-  '5xl': '3rem',      // 48px
-  '6xl': '3.75rem',   // 60px
-  '7xl': '4.5rem',    // 72px
-  '8xl': '6rem',      // 96px
-  '9xl': '8rem',      // 128px
-} as const;
-
-/**
- * Font Weights
- */
-export const fontWeights = {
-  thin: '100',
-  extralight: '200',
-  light: '300',
-  normal: '400',
-  medium: '500',
-  semibold: '600',
-  bold: '700',
-  extrabold: '800',
-  black: '900',
-} as const;
-
-/**
- * Line Heights
- */
-export const lineHeights = {
-  none: '1',
-  tight: '1.25',
-  snug: '1.375',
-  normal: '1.5',
-  relaxed: '1.625',
-  loose: '2',
-} as const;
-
-/**
- * Letter Spacing
- */
-export const letterSpacings = {
-  tighter: '-0.05em',
-  tight: '-0.025em',
-  normal: '0em',
-  wide: '0.025em',
-  wider: '0.05em',
-  widest: '0.1em',
-} as const;
-
-// ============================================================================
-// TYPOGRAPHY SCALE - 실제 사용을 위한 스케일
-// ============================================================================
-
-/**
- * Heading Typography Scale
- */
-export const headingScale = {
+export const typography = {
+  // Headings
   h1: {
-    fontSize: fontSizes['5xl'],      // 48px
-    fontWeight: fontWeights.bold,    // 700
-    lineHeight: lineHeights.tight,   // 1.25
-    letterSpacing: letterSpacings.tight, // -0.025em
+    fontSize: '2.25rem',    // 36px
+    fontWeight: '700',      // Bold
+    lineHeight: '1.4',      // 140%
   },
   h2: {
-    fontSize: fontSizes['4xl'],      // 36px
-    fontWeight: fontWeights.bold,    // 700
-    lineHeight: lineHeights.tight,   // 1.25
-    letterSpacing: letterSpacings.tight, // -0.025em
+    fontSize: '1.75rem',    // 28px
+    fontWeight: '700',      // Bold
+    lineHeight: '1.4',      // 140%
   },
-  h3: {
-    fontSize: fontSizes['3xl'],      // 30px
-    fontWeight: fontWeights.semibold, // 600
-    lineHeight: lineHeights.snug,    // 1.375
-    letterSpacing: letterSpacings.normal, // 0em
+  subtitle1: {
+    fontSize: '1.25rem',    // 20px
+    fontWeight: '600',      // SemiBold
+    lineHeight: '1.5',      // 150%
   },
-  h4: {
-    fontSize: fontSizes['2xl'],      // 24px
-    fontWeight: fontWeights.semibold, // 600
-    lineHeight: lineHeights.snug,    // 1.375
-    letterSpacing: letterSpacings.normal, // 0em
+  // Body Text
+  body1: {
+    fontSize: '1rem',       // 16px
+    fontWeight: '400',      // Regular
+    lineHeight: '1.6',      // 160%
   },
-  h5: {
-    fontSize: fontSizes.xl,          // 20px
-    fontWeight: fontWeights.medium,  // 500
-    lineHeight: lineHeights.normal,  // 1.5
-    letterSpacing: letterSpacings.normal, // 0em
+  body1Medium: {
+    fontSize: '1rem',       // 16px
+    fontWeight: '500',      // Medium
+    lineHeight: '1.6',      // 160%
   },
-  h6: {
-    fontSize: fontSizes.lg,          // 18px
-    fontWeight: fontWeights.medium,  // 500
-    lineHeight: lineHeights.normal,  // 1.5
-    letterSpacing: letterSpacings.normal, // 0em
+  body2: {
+    fontSize: '0.875rem',   // 14px
+    fontWeight: '400',      // Regular
+    lineHeight: '1.6',      // 160%
+  },
+  body2Medium: {
+    fontSize: '0.875rem',   // 14px
+    fontWeight: '500',      // Medium
+    lineHeight: '1.6',      // 160%
+  },
+  // Caption
+  caption: {
+    fontSize: '0.75rem',    // 12px
+    fontWeight: '400',      // Regular
+    lineHeight: '1.5',      // 150%
   },
 } as const;
 
+// ============================================================================
+// SPACING SYSTEM
+// ============================================================================
+
 /**
- * Body Typography Scale
+ * Spacing System - 8px 기반 배수 시스템
+ * 일관된 시각적 리듬감과 컴포넌트 간 위계 표현
  */
-export const bodyScale = {
-  body: {
-    fontSize: fontSizes.base,        // 16px
-    fontWeight: fontWeights.normal,  // 400
-    lineHeight: lineHeights.relaxed, // 1.625
-    letterSpacing: letterSpacings.normal, // 0em
-  },
-  bodyLarge: {
-    fontSize: fontSizes.lg,          // 18px
-    fontWeight: fontWeights.normal,  // 400
-    lineHeight: lineHeights.relaxed, // 1.625
-    letterSpacing: letterSpacings.normal, // 0em
-  },
-  bodySmall: {
-    fontSize: fontSizes.sm,          // 14px
-    fontWeight: fontWeights.normal,  // 400
-    lineHeight: lineHeights.normal,  // 1.5
-    letterSpacing: letterSpacings.normal, // 0em
-  },
-  caption: {
-    fontSize: fontSizes.xs,          // 12px
-    fontWeight: fontWeights.normal,  // 400
-    lineHeight: lineHeights.normal,  // 1.5
-    letterSpacing: letterSpacings.wide, // 0.025em
+export const spacing = {
+  '1x': '0.5rem',    // 8px
+  '2x': '1rem',      // 16px
+  '3x': '1.5rem',    // 24px
+  '4x': '2rem',      // 32px
+  '6x': '3rem',      // 48px
+  '8x': '4rem',      // 64px
+} as const;
+
+// ============================================================================
+// LAYOUT & GRID SYSTEM
+// ============================================================================
+
+/**
+ * Layout System - 사이드 내비게이션 고정 레이아웃
+ */
+export const layout = {
+  minWidth: '1280px',        // 최소 너비
+  maxContentWidth: '1440px', // 최대 콘텐츠 너비
+  sidebarWidth: '260px',     // 사이드 내비게이션 너비
+  gridColumns: 12,           // 12 Column Grid System
+  gutter: '24px',           // 그리드 간격
+} as const;
+
+// ============================================================================
+// ICONOGRAPHY
+// ============================================================================
+
+/**
+ * Icon System - Lucide Icons 기반
+ */
+export const iconography = {
+  library: 'Lucide Icons',
+  strokeWidth: '1.5px',
+  style: 'Line-based',
+  sizes: {
+    sm: '16px',
+    md: '20px',
+    lg: '24px',
   },
 } as const;
 
@@ -271,20 +206,16 @@ export const bodyScale = {
 export const designTokens = {
   colors: {
     primary: primaryColors,
-    secondary: secondaryColors,
-    accent: accentColors,
     grayscale: grayscaleColors,
-    semantic: semanticColors,
+    system: systemColors,
   },
   typography: {
     fontFamilies,
-    fontSizes,
-    fontWeights,
-    lineHeights,
-    letterSpacings,
-    headingScale,
-    bodyScale,
+    scale: typography,
   },
+  spacing,
+  layout,
+  iconography,
 } as const;
 
 export default designTokens;

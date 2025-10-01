@@ -15,7 +15,7 @@ const config = {
     },
     extend: {
       colors: {
-        // Smart Road Design System Colors
+        // Smart Road Design System Colors - KOREATECH Blue 기반
         primary: {
           50: designTokens.colors.primary[50],
           100: designTokens.colors.primary[100],
@@ -30,34 +30,6 @@ const config = {
           DEFAULT: designTokens.colors.primary[500],
           foreground: 'hsl(var(--primary-foreground))',
         },
-        secondary: {
-          50: designTokens.colors.secondary[50],
-          100: designTokens.colors.secondary[100],
-          200: designTokens.colors.secondary[200],
-          300: designTokens.colors.secondary[300],
-          400: designTokens.colors.secondary[400],
-          500: designTokens.colors.secondary[500],
-          600: designTokens.colors.secondary[600],
-          700: designTokens.colors.secondary[700],
-          800: designTokens.colors.secondary[800],
-          900: designTokens.colors.secondary[900],
-          DEFAULT: designTokens.colors.secondary[500],
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        accent: {
-          50: designTokens.colors.accent[50],
-          100: designTokens.colors.accent[100],
-          200: designTokens.colors.accent[200],
-          300: designTokens.colors.accent[300],
-          400: designTokens.colors.accent[400],
-          500: designTokens.colors.accent[500],
-          600: designTokens.colors.accent[600],
-          700: designTokens.colors.accent[700],
-          800: designTokens.colors.accent[800],
-          900: designTokens.colors.accent[900],
-          DEFAULT: designTokens.colors.accent[500],
-          foreground: 'hsl(var(--accent-foreground))',
-        },
         gray: {
           50: designTokens.colors.grayscale[50],
           100: designTokens.colors.grayscale[100],
@@ -69,13 +41,12 @@ const config = {
           700: designTokens.colors.grayscale[700],
           800: designTokens.colors.grayscale[800],
           900: designTokens.colors.grayscale[900],
-          950: designTokens.colors.grayscale[950],
         },
-        // Semantic colors
-        success: designTokens.colors.semantic.success,
-        warning: designTokens.colors.semantic.warning,
-        error: designTokens.colors.semantic.error,
-        info: designTokens.colors.semantic.info,
+        // System colors
+        success: designTokens.colors.system.success,
+        warning: designTokens.colors.system.warning,
+        danger: designTokens.colors.system.danger,
+        accent: designTokens.colors.system.accent,
         // shadcn/ui colors
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -103,10 +74,7 @@ const config = {
         sans: designTokens.typography.fontFamilies.sans,
         mono: designTokens.typography.fontFamilies.mono,
       },
-      fontSize: designTokens.typography.fontSizes,
-      fontWeight: designTokens.typography.fontWeights,
-      lineHeight: designTokens.typography.lineHeights,
-      letterSpacing: designTokens.typography.letterSpacings,
+      spacing: designTokens.spacing,
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
