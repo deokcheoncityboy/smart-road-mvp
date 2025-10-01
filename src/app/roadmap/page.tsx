@@ -28,9 +28,9 @@ export default function RoadmapPage() {
       <div className="p-6 space-y-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">맞춤형 성장 로드맵</h1>
-            <p className="text-gray-600 mt-1">AI가 분석한 당신만의 성장 경로를 따라가세요</p>
+          <div className="space-y-2x">
+            <h1 className="text-2xl font-bold text-gray-600">맞춤형 성장 로드맵</h1>
+            <p className="text-base text-gray-500">AI가 분석한 당신만의 성장 경로를 따라가세요</p>
           </div>
           <div className="flex items-center space-x-3 mt-4 md:mt-0">
             <Badge variant="secondary" className="bg-blue-100 text-blue-800">

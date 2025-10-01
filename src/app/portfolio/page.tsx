@@ -29,9 +29,9 @@ export default function PortfolioPage() {
       <div className="p-6 space-y-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">포트폴리오 생성</h1>
-            <p className="text-gray-600 mt-1">AI가 당신의 데이터를 분석하여 전문적인 포트폴리오를 생성합니다</p>
+          <div className="space-y-2x">
+            <h1 className="text-2xl font-bold text-gray-600">포트폴리오 생성</h1>
+            <p className="text-base text-gray-500">AI가 당신의 데이터를 분석하여 전문적인 포트폴리오를 생성합니다</p>
           </div>
           <div className="flex items-center space-x-3 mt-4 md:mt-0">
             <Badge variant="secondary" className="bg-blue-100 text-blue-800">
