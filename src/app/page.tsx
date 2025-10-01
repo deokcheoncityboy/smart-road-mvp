@@ -54,11 +54,11 @@ export default function Home() {
             성적, 비교과, 자격증, 수상 내역을 한 곳에서 관리하고, 
             AI 기반 분석을 통해 강점을 파악하고 부족한 역량을 채워나가세요.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3x justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/dashboard">
-              <Button size="lg" className="text-lg px-8 py-6">
+              <Button size="lg" className="text-lg px-8 py-6 flex items-center">
                 무료로 시작하기
-                <ArrowRight className="ml-2x h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6">
@@ -70,7 +70,7 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="container py-8x">
-        <div className="text-center space-y-2x mb-6x">
+        <div className="text-center space-y-4 mb-12">
           <h2 className="text-xl md:text-2xl font-bold text-gray-600">
             핵심 기능
           </h2>
@@ -80,9 +80,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3x">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-            <CardContent className="p-3x text-center space-y-2x">
+            <CardContent className="p-8 text-center space-y-4">
               <div className="h-16 w-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto">
                 <BarChart3 className="h-8 w-8 text-primary-600" />
               </div>
