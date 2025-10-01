@@ -23,7 +23,7 @@ export function AppLayout({
       <div className="flex">
         {showSidebar && <Sidebar />}
         
-        <main className={`flex-1 ${showSidebar ? 'md:ml-64' : ''}`}>
+        <main className={`flex-1 ${showSidebar ? 'md:ml-64' : ''} pt-16`}>
           <div className="min-h-screen">
             {children}
           </div>
