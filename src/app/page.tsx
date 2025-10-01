@@ -45,7 +45,7 @@ export default function Home() {
           <Badge variant="secondary" className="text-sm">
             KOREATECH 학생을 위한 지능형 플랫폼
           </Badge>
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-600 leading-tight">
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-600 leading-relaxed">
             분산된 데이터를 통합하고<br />
             <span className="text-primary-600">AI로 분석</span>하여<br />
             개인 맞춤형 진로 로드맵을 제공합니다

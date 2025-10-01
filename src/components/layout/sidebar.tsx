@@ -66,6 +66,16 @@ export function Sidebar() {
   return (
     <div className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0 md:top-16">
       <div className="flex-1 flex flex-col min-h-0 bg-white border-r border-gray-200">
+        {/* Logo */}
+        <div className="flex items-center h-16 flex-shrink-0 px-4 border-b border-gray-200">
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="h-8 w-8 rounded-lg bg-primary-600 flex items-center justify-center">
+              <span className="text-white font-bold text-sm">SR</span>
+            </div>
+            <span className="font-bold text-lg text-primary-900">Smart Road</span>
+          </Link>
+        </div>
+
         {/* Navigation */}
         <div className="flex-1 flex flex-col overflow-y-auto">
           <nav className="flex-1 px-4 py-6 space-y-1">
