@@ -1,13 +1,13 @@
-# Smart Road Design System V1.0 사용 가이드
+# Smart Road Design System V2.0 사용 가이드
 
 이 문서는 Smart Road 프로젝트의 새로운 디자인 시스템을 React 컴포넌트에서 어떻게 사용하는지 설명합니다.
 
 ## 🎯 브랜드 아이덴티티
 
 - **서비스명**: 스마트 로드 (Smart Road)
-- **슬로건**: "데이터로 밝히는 너의 커리어 여정"
-- **핵심 가치**: 성장, 신뢰, 내비게이션
-- **캐릭터**: 내비 (Navi) - 부엉이 + 학사모 + 나침반
+- **브랜드 페르소나**: 신뢰할 수 있는 커리어 멘토
+- **디자인 키워드**: Reliable, Structured, Insightful, Empowering, Clarity
+- **핵심 가치**: 신뢰성, 체계성, 통찰력, 성장 지원, 명확성
 
 ## 📦 Import 방법
 
@@ -21,7 +21,7 @@ import { primaryColors, grayscaleColors, systemColors, typography, spacing, layo
 
 ## 🎨 색상 사용법
 
-### KOREATECH Blue 기반 컬러 시스템
+### 신뢰할 수 있는 커리어 멘토 컬러 시스템
 
 ```tsx
 'use client';
@@ -32,9 +32,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 export function ColorExample() {
   return (
     <div className="space-y-6">
-      {/* Primary Colors - KOREATECH Blue */}
+      {/* Primary Colors - Deep Blue */}
       <div className="space-y-3">
-        <h3 className="text-xl font-semibold text-gray-800">Primary Colors - KOREATECH Blue</h3>
+        <h3 className="text-xl font-semibold text-gray-600">Primary Colors - Deep Blue (#0A3D62)</h3>
+        <p className="text-sm text-gray-500">신뢰성과 전문성을 나타내는 메인 컬러</p>
         <div className="flex gap-3">
           <Button className="bg-primary-500 hover:bg-primary-400 text-white">
             Primary Button
@@ -52,25 +53,46 @@ export function ColorExample() {
         </div>
       </div>
 
+      {/* Secondary Colors - Muted Teal */}
+      <div className="space-y-3">
+        <h3 className="text-xl font-semibold text-gray-600">Secondary Colors - Muted Teal (#3C6E71)</h3>
+        <p className="text-sm text-gray-500">사용자의 상호작용을 유도하는 보조 컬러</p>
+        <div className="flex gap-3">
+          <Button className="bg-secondary-500 hover:bg-secondary-400 text-white">
+            Secondary Button
+          </Button>
+          <Button variant="outline" className="border-secondary-500 text-secondary-500 hover:bg-secondary-50">
+            Outline Button
+          </Button>
+        </div>
+        <div className="flex gap-2">
+          <div className="w-8 h-8 bg-secondary-100 rounded"></div>
+          <div className="w-8 h-8 bg-secondary-200 rounded"></div>
+          <div className="w-8 h-8 bg-secondary-500 rounded"></div>
+          <div className="w-8 h-8 bg-secondary-700 rounded"></div>
+          <div className="w-8 h-8 bg-secondary-900 rounded"></div>
+        </div>
+      </div>
+
       {/* System Colors */}
       <div className="space-y-3">
-        <h3 className="text-xl font-semibold text-gray-800">System Colors</h3>
+        <h3 className="text-xl font-semibold text-gray-600">System Colors</h3>
         <div className="flex gap-3">
+          <Button className="bg-accent text-white">Accent (Vibrant Green)</Button>
           <Button className="bg-success text-white">Success</Button>
           <Button className="bg-warning text-white">Warning</Button>
           <Button className="bg-danger text-white">Danger</Button>
-          <Button className="bg-accent text-white">Accent</Button>
         </div>
       </div>
 
       {/* Grayscale */}
       <div className="space-y-3">
-        <h3 className="text-xl font-semibold text-gray-800">Grayscale</h3>
+        <h3 className="text-xl font-semibold text-gray-600">Grayscale</h3>
         <div className="flex gap-2">
           <div className="w-8 h-8 bg-gray-100 rounded"></div>
-          <div className="w-8 h-8 bg-gray-300 rounded"></div>
-          <div className="w-8 h-8 bg-gray-500 rounded"></div>
-          <div className="w-8 h-8 bg-gray-700 rounded"></div>
+          <div className="w-8 h-8 bg-gray-200 rounded"></div>
+          <div className="w-8 h-8 bg-gray-400 rounded"></div>
+          <div className="w-8 h-8 bg-gray-600 rounded"></div>
           <div className="w-8 h-8 bg-gray-800 rounded"></div>
         </div>
       </div>
@@ -91,34 +113,32 @@ export function TypographyExample() {
     <div className="space-y-6">
       {/* Headings */}
       <div className="space-y-4">
-        <h1 className="text-4xl font-bold leading-tight text-gray-800">
-          H1 Heading (36px) - 페이지 메인 타이틀
+        <h1 className="text-2xl font-bold leading-tight text-gray-600">
+          H1 Display (32px) - 페이지 제목
         </h1>
-        <h2 className="text-3xl font-bold leading-tight text-gray-800">
-          H2 Heading (28px) - 섹션 타이틀
+        <h2 className="text-xl font-bold leading-tight text-gray-600">
+          H2 Headline (24px) - 섹션 제목
         </h2>
-        <h3 className="text-xl font-semibold leading-normal text-gray-800">
-          Subtitle 1 (20px) - 카드, 컴포넌트 타이틀
+        <h3 className="text-lg font-semibold leading-normal text-gray-600">
+          H3 Sub-headline (18px) - 카드 제목, 작은 섹션 제목
         </h3>
       </div>
 
       {/* Body Text */}
       <div className="space-y-4">
-        <p className="text-base font-normal leading-relaxed text-gray-700">
-          Body 1 (16px) - 본문, 긴 설명에 사용합니다.
+        <p className="text-base font-normal leading-relaxed text-gray-600">
+          Body Default (16px) - 본문, 기본 텍스트에 사용합니다.
         </p>
-        <p className="text-base font-medium leading-relaxed text-gray-700">
-          Body 1 Medium (16px) - 강조가 필요한 본문에 사용합니다.
+        <p className="text-sm font-normal leading-normal text-gray-500">
+          Caption (14px) - 보조 설명, 저작권 표시에 사용합니다.
         </p>
-        <p className="text-sm font-normal leading-relaxed text-gray-700">
-          Body 2 (14px) - 부가 설명, 인풋 텍스트에 사용합니다.
-        </p>
-        <p className="text-sm font-medium leading-relaxed text-gray-700">
-          Body 2 Medium (14px) - 강조가 필요한 부가 설명에 사용합니다.
-        </p>
-        <p className="text-xs font-normal leading-normal text-gray-500">
-          Caption (12px) - 도움말, 저작권 정보에 사용합니다.
-        </p>
+      </div>
+
+      {/* Font Weights */}
+      <div className="space-y-2">
+        <p className="text-base font-normal text-gray-600">Regular (400)</p>
+        <p className="text-base font-semibold text-gray-600">Semi-Bold (600)</p>
+        <p className="text-base font-bold text-gray-600">Bold (700)</p>
       </div>
     </div>
   );
@@ -268,23 +288,23 @@ import { TrendingUp, Users, Award } from 'lucide-react';
 
 export function DashboardCard() {
   return (
-    <Card className="border-gray-200 hover:border-primary-300 transition-colors">
+    <Card className="border-gray-200 hover:border-primary-300 transition-colors shadow-sm">
       <CardHeader className="bg-primary-50 pb-2x">
-        <CardTitle className="text-xl font-semibold leading-normal text-gray-800">
+        <CardTitle className="text-lg font-semibold leading-normal text-gray-600">
           학업 성과
         </CardTitle>
-        <Badge className="bg-success text-white w-fit">
+        <Badge className="bg-accent text-white w-fit">
           상승 추세
         </Badge>
       </CardHeader>
       <CardContent className="space-y-2x">
         <div className="flex items-center gap-2x">
           <TrendingUp className="w-5 h-5 text-primary-500" />
-          <span className="text-base font-medium leading-relaxed text-gray-700">
+          <span className="text-base font-normal leading-relaxed text-gray-600">
             GPA 3.8
           </span>
         </div>
-        <p className="text-sm leading-relaxed text-gray-600">
+        <p className="text-sm leading-normal text-gray-500">
           이번 학기 0.2 상승했습니다.
         </p>
         <Button className="bg-primary-500 hover:bg-primary-400 text-white w-full">
@@ -308,10 +328,10 @@ export function SmartRoadAlerts() {
   return (
     <div className="space-y-3x">
       {/* Success Alert */}
-      <Alert className="border-success bg-success/10">
-        <CheckCircle className="h-4 w-4 text-success" />
-        <AlertTitle className="text-success">성공</AlertTitle>
-        <AlertDescription className="text-success/80">
+      <Alert className="border-accent bg-accent/10">
+        <CheckCircle className="h-4 w-4 text-accent" />
+        <AlertTitle className="text-accent">성공</AlertTitle>
+        <AlertDescription className="text-accent/80">
           포트폴리오가 성공적으로 생성되었습니다.
         </AlertDescription>
       </Alert>
@@ -351,9 +371,9 @@ export function DashboardWidget() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3x">
       {/* GPA 위젯 */}
-      <Card className="border-primary-200">
+      <Card className="border-gray-200 shadow-sm">
         <CardHeader className="pb-2x">
-          <CardTitle className="text-lg font-semibold text-gray-800 flex items-center gap-2x">
+          <CardTitle className="text-lg font-semibold text-gray-600 flex items-center gap-2x">
             <TrendingUp className="w-5 h-5 text-primary-500" />
             현재 GPA
           </CardTitle>
@@ -361,35 +381,35 @@ export function DashboardWidget() {
         <CardContent>
           <div className="text-3xl font-bold text-primary-500 mb-2x">3.85</div>
           <Progress value={85} className="h-2 mb-2x" />
-          <p className="text-sm text-gray-600">목표: 4.0</p>
+          <p className="text-sm text-gray-500">목표: 4.0</p>
         </CardContent>
       </Card>
 
       {/* 비교과 활동 위젯 */}
-      <Card className="border-success/20">
+      <Card className="border-gray-200 shadow-sm">
         <CardHeader className="pb-2x">
-          <CardTitle className="text-lg font-semibold text-gray-800 flex items-center gap-2x">
-            <BookOpen className="w-5 h-5 text-success" />
+          <CardTitle className="text-lg font-semibold text-gray-600 flex items-center gap-2x">
+            <BookOpen className="w-5 h-5 text-secondary-500" />
             비교과 활동
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-3xl font-bold text-success mb-2x">12</div>
-          <p className="text-sm text-gray-600">이번 학기 완료</p>
+          <div className="text-3xl font-bold text-secondary-500 mb-2x">12</div>
+          <p className="text-sm text-gray-500">이번 학기 완료</p>
         </CardContent>
       </Card>
 
       {/* 경고 위젯 */}
-      <Card className="border-warning/20">
+      <Card className="border-gray-200 shadow-sm">
         <CardHeader className="pb-2x">
-          <CardTitle className="text-lg font-semibold text-gray-800 flex items-center gap-2x">
+          <CardTitle className="text-lg font-semibold text-gray-600 flex items-center gap-2x">
             <AlertTriangle className="w-5 h-5 text-warning" />
             학사 경고
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-3xl font-bold text-warning mb-2x">안전</div>
-          <p className="text-sm text-gray-600">현재 위험도: 낮음</p>
+          <div className="text-3xl font-bold text-accent mb-2x">안전</div>
+          <p className="text-sm text-gray-500">현재 위험도: 낮음</p>
         </CardContent>
       </Card>
     </div>
@@ -510,15 +530,19 @@ export function SmartRoadButton({
 
 디자인 시스템을 사용할 때 다음 사항들을 확인하세요:
 
-- [ ] KOREATECH Blue 기반 컬러 시스템 사용
-- [ ] 역할별 타이포그래피 시스템 적용 (h1, h2, subtitle1, body1, body2, caption)
+- [ ] Deep Blue (#0A3D62) 기반 Primary 컬러 시스템 사용
+- [ ] Muted Teal (#3C6E71) 기반 Secondary 컬러 시스템 사용
+- [ ] Vibrant Green (#4CAF50) 기반 Accent 컬러 사용
+- [ ] 역할별 타이포그래피 시스템 적용 (H1: 32px, H2: 24px, H3: 18px, Body: 16px, Caption: 14px)
 - [ ] 8px 기반 간격 시스템 사용 (1x, 2x, 3x, 4x, 6x, 8x)
 - [ ] 사이드 내비게이션 고정 레이아웃 (최소 1280px, 최대 1440px)
 - [ ] Lucide Icons 사용 (16px, 20px, 24px, strokeWidth: 1.5px)
-- [ ] 시스템 컬러 사용 (success, warning, danger, accent)
+- [ ] 시스템 컬러 사용 (accent, success, warning, danger)
 - [ ] 다크 모드 지원 확인
 - [ ] 반응형 디자인 적용
 - [ ] 접근성 고려 (색상 대비, 폰트 크기 등)
 - [ ] 일관된 spacing과 border-radius 사용
+- [ ] 신뢰할 수 있는 커리어 멘토 페르소나 반영
+- [ ] 명확성, 체계성, 통찰력, 성장 지원, 명확성 원칙 적용
 
 이 가이드를 따라 Smart Road 프로젝트의 디자인 시스템을 일관성 있게 사용하세요!

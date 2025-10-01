@@ -15,7 +15,7 @@ const config = {
     },
     extend: {
       colors: {
-        // Smart Road Design System Colors - KOREATECH Blue 기반
+        // Smart Road Design System Colors V2.0 - 신뢰할 수 있는 커리어 멘토
         primary: {
           50: designTokens.colors.primary[50],
           100: designTokens.colors.primary[100],
@@ -29,6 +29,20 @@ const config = {
           900: designTokens.colors.primary[900],
           DEFAULT: designTokens.colors.primary[500],
           foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          50: designTokens.colors.secondary[50],
+          100: designTokens.colors.secondary[100],
+          200: designTokens.colors.secondary[200],
+          300: designTokens.colors.secondary[300],
+          400: designTokens.colors.secondary[400],
+          500: designTokens.colors.secondary[500],
+          600: designTokens.colors.secondary[600],
+          700: designTokens.colors.secondary[700],
+          800: designTokens.colors.secondary[800],
+          900: designTokens.colors.secondary[900],
+          DEFAULT: designTokens.colors.secondary[500],
+          foreground: 'hsl(var(--secondary-foreground))',
         },
         gray: {
           50: designTokens.colors.grayscale[50],

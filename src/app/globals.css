@@ -4,74 +4,82 @@
 
 @layer base {
   :root {
-    /* Smart Road Design System V1.0 - Light Theme */
+    /* Smart Road Design System V2.0 - Light Theme */
     --background: 0 0% 100%;
-    --foreground: 220 13% 18%;  /* Gray-800 (#172B4D) */
+    --foreground: 0 0% 13%;  /* Text Primary (#212121) */
     --card: 0 0% 100%;
-    --card-foreground: 220 13% 18%;
+    --card-foreground: 0 0% 13%;
     --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 18%;
+    --popover-foreground: 0 0% 13%;
     
-    /* Primary Colors - KOREATECH Blue (#0052CC) */
-    --primary: 220 100% 40%;
+    /* Primary Colors - Deep Blue (#0A3D62) */
+    --primary: 201 85% 20%;
     --primary-foreground: 0 0% 98%;
     
+    /* Secondary Colors - Muted Teal (#3C6E71) */
+    --secondary: 183 33% 35%;
+    --secondary-foreground: 0 0% 98%;
+    
     /* Muted Colors */
-    --muted: 220 9% 96%;  /* Gray-100 (#F4F5F7) */
-    --muted-foreground: 220 9% 46%;  /* Gray-500 (#7A869A) */
+    --muted: 0 0% 96%;  /* Background (#F5F5F5) */
+    --muted-foreground: 0 0% 46%;  /* Text Secondary (#757575) */
     
     /* Destructive Colors */
-    --destructive: 12 95% 46%;  /* Danger (#DE350B) */
+    --destructive: 4 90% 58%;  /* Danger (#F44336) */
     --destructive-foreground: 0 0% 98%;
     
     /* Border and Input */
-    --border: 220 9% 87%;  /* Gray-300 (#DFE1E6) */
-    --input: 220 9% 87%;
-    --ring: 220 100% 40%;  /* Primary Blue */
+    --border: 0 0% 88%;  /* Border (#E0E0E0) */
+    --input: 0 0% 88%;
+    --ring: 201 85% 20%;  /* Primary Deep Blue */
     
     /* Border Radius */
     --radius: 0.5rem;
     
-    /* Chart Colors - KOREATECH Blue 기반 */
-    --chart-1: 220 100% 40%;  /* Primary Blue */
-    --chart-2: 142 100% 27%;  /* Success Green */
-    --chart-3: 45 100% 50%;   /* Warning Orange */
-    --chart-4: 12 95% 46%;    /* Danger Red */
-    --chart-5: 220 9% 46%;    /* Gray */
+    /* Chart Colors - 신뢰할 수 있는 커리어 멘토 */
+    --chart-1: 201 85% 20%;  /* Primary Deep Blue */
+    --chart-2: 183 33% 35%;  /* Secondary Muted Teal */
+    --chart-3: 122 39% 49%;  /* Accent Vibrant Green */
+    --chart-4: 4 90% 58%;    /* Danger Red */
+    --chart-5: 0 0% 46%;     /* Gray */
   }
 
   .dark {
-    /* Smart Road Design System V1.0 - Dark Theme */
-    --background: 220 13% 9%;  /* Dark background */
-    --foreground: 220 9% 87%;  /* Light text */
-    --card: 220 13% 9%;
-    --card-foreground: 220 9% 87%;
-    --popover: 220 13% 9%;
-    --popover-foreground: 220 9% 87%;
+    /* Smart Road Design System V2.0 - Dark Theme */
+    --background: 0 0% 9%;  /* Dark background */
+    --foreground: 0 0% 87%;  /* Light text */
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 87%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 87%;
     
-    /* Primary Colors - KOREATECH Blue */
-    --primary: 220 100% 50%;  /* Lighter blue for dark theme */
-    --primary-foreground: 220 13% 9%;
+    /* Primary Colors - Deep Blue */
+    --primary: 201 85% 30%;  /* Lighter blue for dark theme */
+    --primary-foreground: 0 0% 9%;
+    
+    /* Secondary Colors - Muted Teal */
+    --secondary: 183 33% 45%;  /* Lighter teal for dark theme */
+    --secondary-foreground: 0 0% 9%;
     
     /* Muted Colors */
-    --muted: 220 9% 15%;  /* Dark muted */
-    --muted-foreground: 220 9% 60%;  /* Medium gray */
+    --muted: 0 0% 15%;  /* Dark muted */
+    --muted-foreground: 0 0% 60%;  /* Medium gray */
     
     /* Destructive Colors */
-    --destructive: 12 95% 50%;  /* Lighter red for dark theme */
-    --destructive-foreground: 220 13% 9%;
+    --destructive: 4 90% 68%;  /* Lighter red for dark theme */
+    --destructive-foreground: 0 0% 9%;
     
     /* Border and Input */
-    --border: 220 9% 20%;  /* Dark border */
-    --input: 220 9% 20%;
-    --ring: 220 100% 50%;  /* Primary Blue */
+    --border: 0 0% 20%;  /* Dark border */
+    --input: 0 0% 20%;
+    --ring: 201 85% 30%;  /* Primary Deep Blue */
     
     /* Chart Colors - Dark Theme */
-    --chart-1: 220 100% 50%;  /* Primary Blue */
-    --chart-2: 142 100% 35%;  /* Success Green */
-    --chart-3: 45 100% 60%;   /* Warning Orange */
-    --chart-4: 12 95% 50%;    /* Danger Red */
-    --chart-5: 220 9% 60%;    /* Gray */
+    --chart-1: 201 85% 30%;  /* Primary Deep Blue */
+    --chart-2: 183 33% 45%;  /* Secondary Muted Teal */
+    --chart-3: 122 39% 59%;  /* Accent Vibrant Green */
+    --chart-4: 4 90% 68%;    /* Danger Red */
+    --chart-5: 0 0% 60%;     /* Gray */
   }
 }
 
