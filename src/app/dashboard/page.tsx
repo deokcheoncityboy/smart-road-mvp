@@ -152,9 +152,9 @@ export default function DashboardPage() {
         {/* Key Metrics */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <Card className="border-0 shadow-lg">
-            <CardContent className="p-4x">
+            <CardContent className="p-6">
               <div className="flex items-start justify-between">
-                <div className="space-y-2x">
+                <div className="space-y-3">
                   <p className="text-sm font-medium text-gray-600">현재 GPA</p>
                   <p className="text-3xl font-bold text-gray-600">{data.quickStats.currentGpa}</p>
                   <div className="flex items-center">
@@ -168,7 +168,7 @@ export default function DashboardPage() {
                     </span>
                   </div>
                 </div>
-                <div className="h-12 w-12 bg-primary-100 rounded-full flex items-center justify-center mt-1">
+                <div className="h-12 w-12 bg-primary-100 rounded-full flex items-center justify-center mt-2">
                   <BarChart3 className="h-6 w-6 text-primary-600" />
                 </div>
               </div>
@@ -176,16 +176,16 @@ export default function DashboardPage() {
           </Card>
 
           <Card className="border-0 shadow-lg">
-            <CardContent className="p-4x">
+            <CardContent className="p-6">
               <div className="flex items-start justify-between">
-                <div className="space-y-2x">
+                <div className="space-y-3">
                   <p className="text-sm font-medium text-gray-600">이수 학점</p>
                   <p className="text-3xl font-bold text-gray-600">{data.quickStats.completedCredits}</p>
                   <div className="flex items-center">
                     <span className="text-sm text-gray-500">/ {data.quickStats.totalCredits}</span>
                   </div>
                 </div>
-                <div className="h-12 w-12 bg-secondary-100 rounded-full flex items-center justify-center mt-1">
+                <div className="h-12 w-12 bg-secondary-100 rounded-full flex items-center justify-center mt-2">
                   <BookOpen className="h-6 w-6 text-secondary-600" />
                 </div>
               </div>
@@ -193,9 +193,9 @@ export default function DashboardPage() {
           </Card>
 
           <Card className="border-0 shadow-lg">
-            <CardContent className="p-4x">
+            <CardContent className="p-6">
               <div className="flex items-start justify-between">
-                <div className="space-y-2x">
+                <div className="space-y-3">
                   <p className="text-sm font-medium text-gray-600">비교과 활동</p>
                   <p className="text-3xl font-bold text-gray-600">{data.quickStats.extracurricularActivities}</p>
                   <div className="flex items-center">
@@ -203,7 +203,7 @@ export default function DashboardPage() {
                     <span className="text-sm text-accent">+3 이번 학기</span>
                   </div>
                 </div>
-                <div className="h-12 w-12 bg-accent-100 rounded-full flex items-center justify-center mt-1">
+                <div className="h-12 w-12 bg-accent-100 rounded-full flex items-center justify-center mt-2">
                   <Award className="h-6 w-6 text-accent-600" />
                 </div>
               </div>
@@ -211,9 +211,9 @@ export default function DashboardPage() {
           </Card>
 
           <Card className="border-0 shadow-lg">
-            <CardContent className="p-3x">
-              <div className="flex items-center justify-between">
-                <div className="space-y-1x">
+            <CardContent className="p-6">
+              <div className="flex items-start justify-between">
+                <div className="space-y-3">
                   <p className="text-sm font-medium text-gray-600">목표 달성률</p>
                   <p className="text-3xl font-bold text-gray-600">{data.quickStats.goalProgress}%</p>
                   <div className="flex items-center">
@@ -221,7 +221,7 @@ export default function DashboardPage() {
                     <span className="text-sm text-primary-600">진행 중</span>
                   </div>
                 </div>
-                <div className="h-12 w-12 bg-primary-100 rounded-full flex items-center justify-center">
+                <div className="h-12 w-12 bg-primary-100 rounded-full flex items-center justify-center mt-2">
                   <Target className="h-6 w-6 text-primary-600" />
                 </div>
               </div>
@@ -232,13 +232,13 @@ export default function DashboardPage() {
         {/* Charts Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Card className="border-0 shadow-lg">
-            <CardHeader className="pb-2x">
+            <CardHeader className="pb-4">
               <CardTitle className="flex items-center text-lg font-semibold text-gray-600">
-                <TrendingUp className="w-5 h-5 mr-2x text-primary-600" />
+                <TrendingUp className="w-5 h-5 mr-2 text-primary-600" />
                 GPA 추이
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="pt-0">
               <GPAChart data={data.gpaTrend} />
             </CardContent>
           </Card>

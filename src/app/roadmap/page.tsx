@@ -46,13 +46,13 @@ export default function RoadmapPage() {
 
         {/* Goal Overview */}
         <Card className="border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="flex items-center">
+          <CardHeader className="pb-4">
+            <CardTitle className="flex items-center text-lg font-semibold text-gray-600">
               <Target className="w-5 h-5 mr-2 text-primary-600" />
               목표 현황
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="pt-0">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="text-center p-4 bg-primary-50 rounded-lg">
                 <div className="h-12 w-12 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">

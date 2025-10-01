@@ -47,13 +47,13 @@ export default function PortfolioPage() {
 
         {/* Template Selection */}
         <Card className="border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="flex items-center">
+          <CardHeader className="pb-4">
+            <CardTitle className="flex items-center text-lg font-semibold text-gray-600">
               <FileText className="w-5 h-5 mr-2 text-primary-600" />
               템플릿 선택
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="pt-0">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="border-2 border-primary-200 bg-primary-50 cursor-pointer hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">

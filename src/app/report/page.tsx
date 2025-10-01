@@ -46,13 +46,13 @@ export default function ReportPage() {
 
         {/* Overall Assessment */}
         <Card className="border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="flex items-center">
+          <CardHeader className="pb-4">
+            <CardTitle className="flex items-center text-lg font-semibold text-gray-600">
               <Brain className="w-5 h-5 mr-2 text-primary-600" />
               종합 평가
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="pt-0">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center p-6 bg-green-50 rounded-lg">
                 <div className="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
