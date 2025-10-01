@@ -40,25 +40,25 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="container py-20">
-        <div className="text-center space-y-8">
+      <section className="container py-8x">
+        <div className="text-center space-y-4x">
           <Badge variant="secondary" className="text-sm">
             KOREATECH 학생을 위한 지능형 플랫폼
           </Badge>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-600 leading-tight">
             분산된 데이터를 통합하고<br />
             <span className="text-primary-600">AI로 분석</span>하여<br />
             개인 맞춤형 진로 로드맵을 제공합니다
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base text-gray-500 max-w-3xl mx-auto leading-relaxed">
             성적, 비교과, 자격증, 수상 내역을 한 곳에서 관리하고, 
             AI 기반 분석을 통해 강점을 파악하고 부족한 역량을 채워나가세요.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3x justify-center">
             <Link href="/dashboard">
               <Button size="lg" className="text-lg px-8 py-6">
                 무료로 시작하기
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2x h-5 w-5" />
               </Button>
             </Link>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6">
@@ -69,20 +69,20 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="container py-20">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+      <section className="container py-8x">
+        <div className="text-center space-y-2x mb-6x">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-600">
             핵심 기능
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base text-gray-500 max-w-2xl mx-auto">
             스마트 로드가 제공하는 4가지 핵심 기능으로 
             체계적인 학습과 경력 관리를 시작하세요.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3x">
           <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
-            <CardContent className="p-8 text-center space-y-4">
+            <CardContent className="p-3x text-center space-y-2x">
               <div className="h-16 w-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto">
                 <BarChart3 className="h-8 w-8 text-primary-600" />
               </div>

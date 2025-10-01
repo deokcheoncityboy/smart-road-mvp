@@ -130,12 +130,12 @@ export default function DashboardPage() {
   }
   return (
     <AppLayout>
-      <div className="p-6 space-y-6">
+      <div className="p-3x space-y-4x">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">대시보드</h1>
-            <p className="text-gray-600 mt-1">학습 및 경력 데이터를 한눈에 확인하세요</p>
+          <div className="space-y-2x">
+            <h1 className="text-2xl font-bold text-gray-600">대시보드</h1>
+            <p className="text-base text-gray-500">학습 및 경력 데이터를 한눈에 확인하세요</p>
           </div>
           <div className="flex items-center space-x-3 mt-4 md:mt-0">
             <Badge variant="secondary" className="bg-green-100 text-green-800">
@@ -150,14 +150,14 @@ export default function DashboardPage() {
         </div>
 
         {/* Key Metrics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3x">
           <Card className="border-0 shadow-lg">
-            <CardContent className="p-6">
+            <CardContent className="p-3x">
               <div className="flex items-center justify-between">
-                <div>
+                <div className="space-y-1x">
                   <p className="text-sm font-medium text-gray-600">현재 GPA</p>
-                  <p className="text-3xl font-bold text-gray-900">{data.quickStats.currentGpa}</p>
-                  <div className="flex items-center mt-1">
+                  <p className="text-3xl font-bold text-gray-600">{data.quickStats.currentGpa}</p>
+                  <div className="flex items-center">
                     {data.quickStats.gpaChange >= 0 ? (
                       <TrendingUp className="w-4 h-4 text-green-500 mr-1" />
                     ) : (
@@ -176,12 +176,12 @@ export default function DashboardPage() {
           </Card>
 
           <Card className="border-0 shadow-lg">
-            <CardContent className="p-6">
+            <CardContent className="p-3x">
               <div className="flex items-center justify-between">
-                <div>
+                <div className="space-y-1x">
                   <p className="text-sm font-medium text-gray-600">이수 학점</p>
-                  <p className="text-3xl font-bold text-gray-900">{data.quickStats.completedCredits}</p>
-                  <div className="flex items-center mt-1">
+                  <p className="text-3xl font-bold text-gray-600">{data.quickStats.completedCredits}</p>
+                  <div className="flex items-center">
                     <span className="text-sm text-gray-500">/ {data.quickStats.totalCredits}</span>
                   </div>
                 </div>
@@ -193,14 +193,14 @@ export default function DashboardPage() {
           </Card>
 
           <Card className="border-0 shadow-lg">
-            <CardContent className="p-6">
+            <CardContent className="p-3x">
               <div className="flex items-center justify-between">
-                <div>
+                <div className="space-y-1x">
                   <p className="text-sm font-medium text-gray-600">비교과 활동</p>
-                  <p className="text-3xl font-bold text-gray-900">{data.quickStats.extracurricularActivities}</p>
-                  <div className="flex items-center mt-1">
-                    <TrendingUp className="w-4 h-4 text-green-500 mr-1" />
-                    <span className="text-sm text-green-600">+3 이번 학기</span>
+                  <p className="text-3xl font-bold text-gray-600">{data.quickStats.extracurricularActivities}</p>
+                  <div className="flex items-center">
+                    <TrendingUp className="w-4 h-4 text-accent mr-1" />
+                    <span className="text-sm text-accent">+3 이번 학기</span>
                   </div>
                 </div>
                 <div className="h-12 w-12 bg-accent-100 rounded-full flex items-center justify-center">
@@ -211,12 +211,12 @@ export default function DashboardPage() {
           </Card>
 
           <Card className="border-0 shadow-lg">
-            <CardContent className="p-6">
+            <CardContent className="p-3x">
               <div className="flex items-center justify-between">
-                <div>
+                <div className="space-y-1x">
                   <p className="text-sm font-medium text-gray-600">목표 달성률</p>
-                  <p className="text-3xl font-bold text-gray-900">{data.quickStats.goalProgress}%</p>
-                  <div className="flex items-center mt-1">
+                  <p className="text-3xl font-bold text-gray-600">{data.quickStats.goalProgress}%</p>
+                  <div className="flex items-center">
                     <Target className="w-4 h-4 text-primary-500 mr-1" />
                     <span className="text-sm text-primary-600">진행 중</span>
                   </div>
@@ -229,12 +229,12 @@ export default function DashboardPage() {
           </Card>
         </div>
 
-        {/* Simple Content for Testing */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Charts Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3x">
           <Card className="border-0 shadow-lg">
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <TrendingUp className="w-5 h-5 mr-2 text-primary-600" />
+            <CardHeader className="pb-2x">
+              <CardTitle className="flex items-center text-lg font-semibold text-gray-600">
+                <TrendingUp className="w-5 h-5 mr-2x text-primary-600" />
                 GPA 추이
               </CardTitle>
             </CardHeader>
@@ -247,7 +247,7 @@ export default function DashboardPage() {
         </div>
 
         {/* Recent Activities and Alerts */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3x">
           {/* Recent Activities */}
           <ActivityList activities={data.recentActivities} />
 
