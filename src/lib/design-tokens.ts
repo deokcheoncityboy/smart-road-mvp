@@ -1,49 +1,49 @@
 /**
- * Smart Road Design System Tokens V2.0
+ * Smart Road Design System Tokens V3.0
  * 
  * 이 파일은 Smart Road 프로젝트의 디자인 시스템 토큰을 정의합니다.
  * KOREATECH 학생들을 위한 지능형 학습·경력 관리 플랫폼의 브랜드 아이덴티티를 반영합니다.
  * 
- * 브랜드 페르소나: 신뢰할 수 있는 커리어 멘토
- * 디자인 키워드: Reliable, Structured, Insightful, Empowering, Clarity
+ * 브랜드 페르소나: 신뢰할 수 있는 커리어 파트너
+ * 디자인 키워드: Trustworthy, Clear, Warm, Progressive, Smart
  */
 
 // ============================================================================
-// COLOR PALETTE - 신뢰할 수 있는 커리어 멘토
+// COLOR PALETTE - 신뢰할 수 있는 커리어 파트너
 // ============================================================================
 
 /**
- * Primary Colors - Deep Blue (#0A3D62)
- * 신뢰성과 전문성을 나타내는 메인 컬러
+ * Primary Colors - Blue (#3B82F6)
+ * 신뢰감, 집중력, 성장, 미래 지향성을 나타내는 메인 컬러
  */
 export const primaryColors = {
-  50: '#E8F4FD',   // 매우 연한 블루
-  100: '#D1E9FB',  // 연한 블루
-  200: '#A3D3F7',  // 중간 연한 블루
-  300: '#75BDF3',  // 중간 블루
-  400: '#47A7EF',  // 중간 진한 블루
-  500: '#0A3D62',  // 메인 블루 (Deep Blue)
-  600: '#08314E',  // 진한 블루
-  700: '#06253A',  // 매우 진한 블루
-  800: '#041926',  // 어두운 블루
-  900: '#020D13',  // 가장 어두운 블루
+  50: '#EFF6FF',   // 매우 연한 블루
+  100: '#DBEAFE',  // 연한 블루
+  200: '#BFDBFE',  // 중간 연한 블루
+  300: '#93C5FD',  // 중간 블루
+  400: '#60A5FA',  // 중간 진한 블루
+  500: '#3B82F6',  // 메인 블루 (Blue 500)
+  600: '#2563EB',  // 진한 블루
+  700: '#1D4ED8',  // 매우 진한 블루
+  800: '#1E40AF',  // 어두운 블루
+  900: '#1E3A8A',  // 가장 어두운 블루
 } as const;
 
 /**
- * Secondary Colors - Muted Teal (#3C6E71)
- * 사용자의 상호작용을 유도하는 보조 컬러
+ * Secondary Colors - Violet (#8B5CF6)
+ * AI 인사이트, 추천 배지, 특별 기능 강조를 위한 컬러
  */
 export const secondaryColors = {
-  50: '#F0F7F7',   // 매우 연한 틸
-  100: '#E1EFEF',  // 연한 틸
-  200: '#C3DFDF',  // 중간 연한 틸
-  300: '#A5CFCF',  // 중간 틸
-  400: '#87BFBF',  // 중간 진한 틸
-  500: '#3C6E71',  // 메인 틸 (Muted Teal)
-  600: '#30585A',  // 진한 틸
-  700: '#244243',  // 매우 진한 틸
-  800: '#182C2D',  // 어두운 틸
-  900: '#0C1616',  // 가장 어두운 틸
+  50: '#F5F3FF',   // 매우 연한 바이올렛
+  100: '#EDE9FE',  // 연한 바이올렛
+  200: '#DDD6FE',  // 중간 연한 바이올렛
+  300: '#C4B5FD',  // 중간 바이올렛
+  400: '#A78BFA',  // 중간 진한 바이올렛
+  500: '#8B5CF6',  // 메인 바이올렛 (Violet 500)
+  600: '#7C3AED',  // 진한 바이올렛
+  700: '#6D28D9',  // 매우 진한 바이올렛
+  800: '#5B21B6',  // 어두운 바이올렛
+  900: '#4C1D95',  // 가장 어두운 바이올렛
 } as const;
 
 /**
@@ -51,16 +51,16 @@ export const secondaryColors = {
  * 체계적인 정보 위계를 표현
  */
 export const grayscaleColors = {
-  50: '#F5F5F5',   // Background
-  100: '#F5F5F5',  // Background
-  200: '#E0E0E0',  // Border
-  300: '#E0E0E0',  // Border
-  400: '#757575',  // Text Secondary
-  500: '#757575',  // Text Secondary
-  600: '#212121',  // Text Primary
-  700: '#212121',  // Text Primary
-  800: '#212121',  // Text Primary
-  900: '#212121',  // Text Primary
+  50: '#F9FAFB',   // Background
+  100: '#F9FAFB',  // Background
+  200: '#E5E7EB',  // Border
+  300: '#E5E7EB',  // Border
+  400: '#6B7280',  // Text Secondary
+  500: '#6B7280',  // Text Secondary
+  600: '#1F2937',  // Text Primary
+  700: '#1F2937',  // Text Primary
+  800: '#1F2937',  // Text Primary
+  900: '#1F2937',  // Text Primary
 } as const;
 
 /**
@@ -68,10 +68,11 @@ export const grayscaleColors = {
  * 명확한 상태 표현을 위한 컬러
  */
 export const systemColors = {
-  accent: '#4CAF50',    // Vibrant Green - 목표 달성, 성장 지표
-  success: '#4CAF50',   // 성공, 완료
-  warning: '#FF9800',   // 주의, 경고
-  danger: '#F44336',    // 오류, 위험
+  accent: '#F97316',    // Orange - 따뜻함, 활력, 긍정 피드백
+  success: '#10B981',   // Success - 성공, 완료 상태, 긍정 지표
+  warning: '#F59E0B',   // Warning - 주의 필요, 학사경고 "주의" 단계
+  danger: '#EF4444',    // Error - 오류, 필수 입력 누락, 학사경고 "위험" 단계
+  info: '#06B6D4',      // Info - 정보성 팁, 도움말, 안내 메시지
 } as const;
 
 
@@ -125,29 +126,40 @@ export const typography = {
   h1: {
     fontSize: '2rem',       // 32px - Display
     fontWeight: '700',      // Bold
-    lineHeight: '1.4',      // 140%
+    lineHeight: '1.4',      // 140% (44.8px)
   },
   h2: {
-    fontSize: '1.5rem',     // 24px - Headline
+    fontSize: '1.5rem',     // 24px - Heading
     fontWeight: '700',      // Bold
-    lineHeight: '1.4',      // 140%
+    lineHeight: '1.4',      // 140% (33.6px)
   },
   h3: {
-    fontSize: '1.125rem',   // 18px - Sub-headline
-    fontWeight: '600',      // Semi-Bold
-    lineHeight: '1.5',      // 150%
+    fontSize: '1.25rem',    // 20px - Subheading
+    fontWeight: '600',      // SemiBold
+    lineHeight: '1.4',      // 140% (28px)
   },
   // Body Text
+  bodyLarge: {
+    fontSize: '1rem',       // 16px - Body Large
+    fontWeight: '500',      // Medium
+    lineHeight: '1.6',      // 160% (25.6px)
+  },
   body: {
-    fontSize: '1rem',       // 16px - Default
+    fontSize: '0.875rem',   // 14px - Body
     fontWeight: '400',      // Regular
-    lineHeight: '1.6',      // 160%
+    lineHeight: '1.6',      // 160% (22.4px)
   },
   // Caption
   caption: {
-    fontSize: '0.875rem',   // 14px
+    fontSize: '0.75rem',    // 12px - Caption
     fontWeight: '400',      // Regular
-    lineHeight: '1.5',      // 150%
+    lineHeight: '1.5',      // 150% (18px)
+  },
+  // Button
+  button: {
+    fontSize: '0.9375rem',  // 15px - Button
+    fontWeight: '600',      // SemiBold
+    lineHeight: '1',        // 100% (15px)
   },
 } as const;
 

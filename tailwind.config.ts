@@ -15,7 +15,7 @@ const config = {
     },
     extend: {
       colors: {
-        // Smart Road Design System Colors V2.0 - 신뢰할 수 있는 커리어 멘토
+        // Smart Road Design System Colors V3.0 - 신뢰할 수 있는 커리어 파트너
         primary: {
           50: designTokens.colors.primary[50],
           100: designTokens.colors.primary[100],
@@ -61,6 +61,7 @@ const config = {
         warning: designTokens.colors.system.warning,
         danger: designTokens.colors.system.danger,
         accent: designTokens.colors.system.accent,
+        info: designTokens.colors.system.info,
         // shadcn/ui colors
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
