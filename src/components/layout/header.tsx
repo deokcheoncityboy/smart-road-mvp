@@ -11,15 +11,15 @@ export function Header() {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-lg bg-primary-600 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">SR</span>
+            <div className="h-8 w-8 rounded-lg bg-orange-600 flex items-center justify-center">
+              <span className="text-white font-bold text-sm">T</span>
             </div>
-            <span className="font-bold text-xl text-primary-900">Smart Road</span>
+            <span className="font-bold text-xl text-orange-600">TIBA</span>
           </Link>
         </div>
 
         {/* Desktop Navigation - Center */}
-        <nav className="hidden md:flex items-center space-x-6 flex-1 justify-center">
+        <nav className="hidden md:flex items-center space-x-8 flex-1 justify-center">
           <Link 
             href="/profile" 
             className="text-sm font-medium text-gray-600 hover:text-orange-600 transition-colors"
@@ -27,26 +27,8 @@ export function Header() {
             내 정보
           </Link>
           <Link 
-            href="/dashboard" 
-            className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
-          >
-            대시보드
-          </Link>
-          <Link 
-            href="/report" 
-            className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
-          >
-            진단 리포트
-          </Link>
-          <Link 
-            href="/roadmap" 
-            className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
-          >
-            로드맵
-          </Link>
-          <Link 
             href="/portfolio" 
-            className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
+            className="text-sm font-medium text-gray-600 hover:text-orange-600 transition-colors"
           >
             포트폴리오
           </Link>
@@ -54,7 +36,7 @@ export function Header() {
             href="/ipp" 
             className="text-sm font-medium text-gray-600 hover:text-orange-600 transition-colors"
           >
-            IPP 인턴십
+            IPP 게시판
           </Link>
         </nav>
 
@@ -72,7 +54,7 @@ export function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        <nav className="flex md:hidden items-center space-x-4 flex-1 justify-center">
+        <nav className="flex md:hidden items-center space-x-6 flex-1 justify-center">
           <Link 
             href="/profile" 
             className="text-sm font-medium text-gray-600 hover:text-orange-600 transition-colors"
@@ -80,26 +62,8 @@ export function Header() {
             내 정보
           </Link>
           <Link 
-            href="/dashboard" 
-            className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
-          >
-            대시보드
-          </Link>
-          <Link 
-            href="/report" 
-            className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
-          >
-            리포트
-          </Link>
-          <Link 
-            href="/roadmap" 
-            className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
-          >
-            로드맵
-          </Link>
-          <Link 
             href="/portfolio" 
-            className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
+            className="text-sm font-medium text-gray-600 hover:text-orange-600 transition-colors"
           >
             포트폴리오
           </Link>
