@@ -21,6 +21,12 @@ export function Header() {
         {/* Desktop Navigation - Center */}
         <nav className="hidden md:flex items-center space-x-6 flex-1 justify-center">
           <Link 
+            href="/profile" 
+            className="text-sm font-medium text-gray-600 hover:text-orange-600 transition-colors"
+          >
+            내 정보
+          </Link>
+          <Link 
             href="/dashboard" 
             className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
           >
@@ -46,7 +52,7 @@ export function Header() {
           </Link>
           <Link 
             href="/ipp" 
-            className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
+            className="text-sm font-medium text-gray-600 hover:text-orange-600 transition-colors"
           >
             IPP 인턴십
           </Link>
@@ -67,6 +73,12 @@ export function Header() {
 
         {/* Mobile Navigation */}
         <nav className="flex md:hidden items-center space-x-4 flex-1 justify-center">
+          <Link 
+            href="/profile" 
+            className="text-sm font-medium text-gray-600 hover:text-orange-600 transition-colors"
+          >
+            내 정보
+          </Link>
           <Link 
             href="/dashboard" 
             className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
@@ -93,7 +105,7 @@ export function Header() {
           </Link>
           <Link 
             href="/ipp" 
-            className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
+            className="text-sm font-medium text-gray-600 hover:text-orange-600 transition-colors"
           >
             IPP
           </Link>
