@@ -232,22 +232,22 @@ export default function ProfilePage() {
       </div>
 
       {/* 시간표 섹션 */}
-      <Card>
-        <CardHeader>
+      <Card className="w-full max-w-md">
+        <CardHeader className="pb-3">
           <CardTitle className="text-lg font-semibold text-orange-600 flex items-center gap-2">
             <Calendar className="w-5 h-5" />
             2025년 2학기 시간표
           </CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
+        <CardContent className="pt-0">
+          <div className="space-y-3">
             {/* 시간표 그리드 */}
-            <div className="h-24 relative">
-              <svg className="w-full h-full" viewBox="0 0 300 80">
+            <div className="h-20 relative">
+              <svg className="w-full h-full" viewBox="0 0 280 60">
                 {/* 격자선 */}
                 <defs>
-                  <pattern id="schedule-grid" width="42.8" height="11.4" patternUnits="userSpaceOnUse">
-                    <path d="M 42.8 0 L 0 0 0 11.4" fill="none" stroke="#f3f4f6" strokeWidth="0.5"/>
+                  <pattern id="schedule-grid" width="40" height="8.5" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 8.5" fill="none" stroke="#f3f4f6" strokeWidth="0.5"/>
                   </pattern>
                 </defs>
                 <rect width="100%" height="100%" fill="url(#schedule-grid)" />
@@ -256,8 +256,8 @@ export default function ProfilePage() {
                 {['월', '화', '수', '목', '금', '토', '일'].map((day, index) => (
                   <text
                     key={day}
-                    x={21.4 + (index * 42.8)}
-                    y="8"
+                    x={20 + (index * 40)}
+                    y="6"
                     textAnchor="middle"
                     className="text-xs font-semibold fill-gray-600"
                   >
@@ -274,10 +274,10 @@ export default function ProfilePage() {
                   const startHour = timeStart - 9
                   const endHour = timeEnd - 9
                   
-                  const x = 21.4 + (dayIndex * 42.8)
-                  const y = 15 + (startHour * 8)
-                  const width = 35
-                  const height = (endHour - startHour) * 8
+                  const x = 20 + (dayIndex * 40)
+                  const y = 10 + (startHour * 6)
+                  const width = 32
+                  const height = (endHour - startHour) * 6
                   
                   return (
                     <rect
@@ -294,7 +294,7 @@ export default function ProfilePage() {
               </svg>
             </div>
             
-            <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+            <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white text-sm py-2">
               시간표 불러오기
             </Button>
           </div>
