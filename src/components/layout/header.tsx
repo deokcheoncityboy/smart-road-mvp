@@ -44,6 +44,12 @@ export function Header() {
           >
             포트폴리오
           </Link>
+          <Link 
+            href="/ipp" 
+            className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
+          >
+            IPP 인턴십
+          </Link>
         </nav>
 
         {/* Desktop Actions */}
@@ -84,6 +90,12 @@ export function Header() {
             className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
           >
             포트폴리오
+          </Link>
+          <Link 
+            href="/ipp" 
+            className="text-sm font-medium text-gray-600 hover:text-primary-600 transition-colors"
+          >
+            IPP
           </Link>
         </nav>
 
