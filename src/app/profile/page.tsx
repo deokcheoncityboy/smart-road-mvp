@@ -242,42 +242,45 @@ export default function ProfilePage() {
         <CardContent>
           <div className="space-y-4">
             {/* 시간표 그리드 */}
-            <div className="grid grid-cols-7 gap-1 text-xs">
-              {/* 요일 헤더 */}
-              <div className="text-center font-semibold text-gray-600 py-1">월</div>
-              <div className="text-center font-semibold text-gray-600 py-1">화</div>
-              <div className="text-center font-semibold text-gray-600 py-1">수</div>
-              <div className="text-center font-semibold text-gray-600 py-1">목</div>
-              <div className="text-center font-semibold text-gray-600 py-1">금</div>
-              <div className="text-center font-semibold text-gray-600 py-1">토</div>
-              <div className="text-center font-semibold text-gray-600 py-1">일</div>
-              
-              {/* 시간대별 그리드 */}
-              {Array.from({ length: 8 }, (_, hour) => (
-                <React.Fragment key={hour}>
-                  {Array.from({ length: 7 }, (_, day) => {
-                    const schedule = scheduleData.find(s => {
-                      const dayMap = ['월', '화', '수', '목', '금', '토', '일']
-                      const timeStart = parseInt(s.time.split('-')[0].split(':')[0])
-                      const timeEnd = parseInt(s.time.split('-')[1].split(':')[0])
-                      return dayMap[day] === s.day && hour >= timeStart - 9 && hour < timeEnd - 9
-                    })
-                    
-                    return (
-                      <div 
-                        key={`${hour}-${day}`}
-                        className={`h-5 border rounded text-center flex items-center justify-center text-white text-xs ${
-                          schedule ? schedule.color : 'bg-gray-100'
-                        }`}
-                      >
-                        {schedule && hour === parseInt(schedule.time.split('-')[0].split(':')[0]) - 9 ? 
-                          schedule.subject.split(' ')[0] : ''
-                        }
-                      </div>
-                    )
-                  })}
-                </React.Fragment>
-              ))}
+            <div className="h-24 relative">
+              <div className="grid grid-cols-7 gap-0.5 text-xs h-full">
+                {/* 요일 헤더 */}
+                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">월</div>
+                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">화</div>
+                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">수</div>
+                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">목</div>
+                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">금</div>
+                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">토</div>
+                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">일</div>
+                
+                {/* 시간대별 그리드 */}
+                {Array.from({ length: 6 }, (_, hour) => (
+                  <React.Fragment key={hour}>
+                    {Array.from({ length: 7 }, (_, day) => {
+                      const schedule = scheduleData.find(s => {
+                        const dayMap = ['월', '화', '수', '목', '금', '토', '일']
+                        const timeStart = parseInt(s.time.split('-')[0].split(':')[0])
+                        const timeEnd = parseInt(s.time.split('-')[1].split(':')[0])
+                        return dayMap[day] === s.day && hour >= timeStart - 9 && hour < timeEnd - 9
+                      })
+                      
+                      return (
+                        <div 
+                          key={`${hour}-${day}`}
+                          className={`border rounded text-center flex items-center justify-center text-white text-xs ${
+                            schedule ? schedule.color : 'bg-gray-100'
+                          }`}
+                          style={{ height: 'calc(100% / 7)' }}
+                        >
+                          {schedule && hour === parseInt(schedule.time.split('-')[0].split(':')[0]) - 9 ? 
+                            schedule.subject.split(' ')[0] : ''
+                          }
+                        </div>
+                      )
+                    })}
+                  </React.Fragment>
+                ))}
+              </div>
             </div>
             
             <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
