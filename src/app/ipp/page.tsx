@@ -215,7 +215,7 @@ export default function IPPPage() {
       {/* 학생 정보 섹션 */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg font-semibold text-primary-600 flex items-center gap-2">
+          <CardTitle className="text-lg font-semibold text-orange-600 flex items-center gap-2">
             <User className="w-5 h-5" />
             학생 정보
           </CardTitle>
@@ -256,19 +256,19 @@ export default function IPPPage() {
               {/* 성과 및 활동 */}
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="text-center p-3 bg-gray-50 rounded-lg">
-                  <div className="text-2xl font-bold text-primary-600">{studentInfo.achievements}</div>
+                  <div className="text-2xl font-bold text-orange-600">{studentInfo.achievements}</div>
                   <div className="text-sm text-gray-600">수상 및 공로내역</div>
                 </div>
                 <div className="text-center p-3 bg-gray-50 rounded-lg">
-                  <div className="text-2xl font-bold text-primary-600">{studentInfo.certificates}</div>
+                  <div className="text-2xl font-bold text-orange-600">{studentInfo.certificates}</div>
                   <div className="text-sm text-gray-600">자격증</div>
                 </div>
                 <div className="text-center p-3 bg-gray-50 rounded-lg">
-                  <div className="text-2xl font-bold text-primary-600">{studentInfo.career.count}회</div>
+                  <div className="text-2xl font-bold text-orange-600">{studentInfo.career.count}회</div>
                   <div className="text-sm text-gray-600">경력 사항 ({studentInfo.career.duration})</div>
                 </div>
                 <div className="text-center p-3 bg-gray-50 rounded-lg">
-                  <div className="text-2xl font-bold text-primary-600">{studentInfo.activities}</div>
+                  <div className="text-2xl font-bold text-orange-600">{studentInfo.activities}</div>
                   <div className="text-sm text-gray-600">활동 사항</div>
                 </div>
               </div>
@@ -276,18 +276,18 @@ export default function IPPPage() {
 
             {/* 취업 준비 및 현황 */}
             <div className="space-y-4">
-              <Button className="w-full bg-primary-600 hover:bg-primary-700 text-white">
+              <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
                 진로준비진단 및 구직준비도 검사
               </Button>
               
               <div className="space-y-3">
-                <h4 className="text-lg font-semibold text-primary-600">
+                <h4 className="text-lg font-semibold text-orange-600">
                   {employmentStats.department} 취업 현황
                 </h4>
                 
                 <div className="bg-gray-50 rounded-lg p-4">
                   <div className="text-center mb-4">
-                    <div className="text-3xl font-bold text-primary-600">{employmentStats.employmentRate}</div>
+                    <div className="text-3xl font-bold text-orange-600">{employmentStats.employmentRate}</div>
                     <div className="text-sm text-gray-600">취업률</div>
                   </div>
                   
@@ -318,7 +318,7 @@ export default function IPPPage() {
                     </div>
                     <div className="flex justify-between col-span-2 pt-2 border-t">
                       <span className="font-semibold">합계:</span>
-                      <span className="font-bold text-primary-600">{employmentStats.breakdown.total}명</span>
+                      <span className="font-bold text-orange-600">{employmentStats.breakdown.total}명</span>
                     </div>
                   </div>
                 </div>
@@ -331,7 +331,7 @@ export default function IPPPage() {
       {/* IPP 참여 기업 리스트 */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg font-semibold text-primary-600 flex items-center gap-2">
+          <CardTitle className="text-lg font-semibold text-orange-600 flex items-center gap-2">
             <Building2 className="w-5 h-5" />
             IPP 참여 기업 명단
           </CardTitle>
@@ -460,14 +460,14 @@ export default function IPPPage() {
                     </h4>
                     <div className="flex items-center gap-2">
                       <div className="flex-1 bg-gray-200 rounded-full h-2">
-                        <div 
-                          className="bg-primary-600 h-2 rounded-full" 
-                          style={{ width: `${company.jobRelevance}%` }}
-                        ></div>
-                      </div>
-                      <span className="text-sm font-semibold text-primary-600">
-                        {company.jobRelevance}%
-                      </span>
+                      <div 
+                        className="bg-orange-600 h-2 rounded-full" 
+                        style={{ width: `${company.jobRelevance}%` }}
+                      ></div>
+                    </div>
+                    <span className="text-sm font-semibold text-orange-600">
+                      {company.jobRelevance}%
+                    </span>
                     </div>
                   </div>
 
@@ -506,11 +506,11 @@ export default function IPPPage() {
                         지원자: <span className="font-semibold">{company.totalApplicants.toLocaleString()}명</span>
                       </span>
                       <span className="text-gray-600">
-                        합격자: <span className="font-semibold text-primary-600">{company.acceptedApplicants}명</span>
+                        합격자: <span className="font-semibold text-orange-600">{company.acceptedApplicants}명</span>
                       </span>
                     </div>
                     <span className="text-gray-600">
-                      합격률: <span className="font-semibold text-accent-600">{company.acceptanceRate}%</span>
+                      합격률: <span className="font-semibold text-orange-500">{company.acceptanceRate}%</span>
                     </span>
                   </div>
                 </div>
@@ -523,7 +523,7 @@ export default function IPPPage() {
       {/* 직무 관련 기업 공고 */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg font-semibold text-primary-600 flex items-center gap-2">
+          <CardTitle className="text-lg font-semibold text-orange-600 flex items-center gap-2">
             <Briefcase className="w-5 h-5" />
             직무 관련 기업 공고 명단
           </CardTitle>
@@ -533,8 +533,8 @@ export default function IPPPage() {
             {jobAnnouncements.map((job, index) => (
               <div key={index} className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center">
-                    <Briefcase className="w-5 h-5 text-accent-600" />
+                  <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <Briefcase className="w-5 h-5 text-orange-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-700">{job.company}</h4>
@@ -630,11 +630,11 @@ export default function IPPPage() {
                     <div className="flex items-center gap-3">
                       <div className="flex-1 bg-gray-200 rounded-full h-3">
                         <div 
-                          className="bg-primary-600 h-3 rounded-full" 
+                          className="bg-orange-600 h-3 rounded-full" 
                           style={{ width: `${selectedCompany.jobRelevance}%` }}
                         ></div>
                       </div>
-                      <span className="text-lg font-bold text-primary-600">
+                      <span className="text-lg font-bold text-orange-600">
                         {selectedCompany.jobRelevance}%
                       </span>
                     </div>
@@ -650,19 +650,19 @@ export default function IPPPage() {
                 </h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="bg-gray-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-primary-600">{selectedCompany.avgGpa}</div>
+                    <div className="text-2xl font-bold text-orange-600">{selectedCompany.avgGpa}</div>
                     <div className="text-sm text-gray-600">평균 GPA</div>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-primary-600">{selectedCompany.avgToeic}</div>
+                    <div className="text-2xl font-bold text-orange-600">{selectedCompany.avgToeic}</div>
                     <div className="text-sm text-gray-600">평균 TOEIC</div>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-primary-600">{selectedCompany.avgCertificates}</div>
+                    <div className="text-2xl font-bold text-orange-600">{selectedCompany.avgCertificates}</div>
                     <div className="text-sm text-gray-600">평균 자격증</div>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-primary-600">{selectedCompany.avgActivities}</div>
+                    <div className="text-2xl font-bold text-orange-600">{selectedCompany.avgActivities}</div>
                     <div className="text-sm text-gray-600">평균 활동</div>
                   </div>
                 </div>
@@ -680,11 +680,11 @@ export default function IPPPage() {
                     <div className="text-sm text-gray-600">총 지원자</div>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-primary-600">{selectedCompany.acceptedApplicants}</div>
+                    <div className="text-2xl font-bold text-orange-600">{selectedCompany.acceptedApplicants}</div>
                     <div className="text-sm text-gray-600">합격자</div>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-4 text-center">
-                    <div className="text-2xl font-bold text-accent-600">{selectedCompany.acceptanceRate}%</div>
+                    <div className="text-2xl font-bold text-orange-500">{selectedCompany.acceptanceRate}%</div>
                     <div className="text-sm text-gray-600">합격률</div>
                   </div>
                 </div>
@@ -695,7 +695,7 @@ export default function IPPPage() {
                 <Button variant="outline" onClick={() => setSelectedCompany(null)}>
                   닫기
                 </Button>
-                <Button className="bg-primary-600 hover:bg-primary-700">
+                <Button className="bg-orange-600 hover:bg-orange-700">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   지원하기
                 </Button>
