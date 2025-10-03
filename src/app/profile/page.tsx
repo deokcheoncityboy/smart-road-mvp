@@ -243,44 +243,55 @@ export default function ProfilePage() {
           <div className="space-y-4">
             {/* 시간표 그리드 */}
             <div className="h-24 relative">
-              <div className="grid grid-cols-7 gap-0.5 text-xs h-full">
-                {/* 요일 헤더 */}
-                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">월</div>
-                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">화</div>
-                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">수</div>
-                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">목</div>
-                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">금</div>
-                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">토</div>
-                <div className="text-center font-semibold text-gray-600 text-xs flex items-center justify-center">일</div>
+              <svg className="w-full h-full" viewBox="0 0 300 80">
+                {/* 격자선 */}
+                <defs>
+                  <pattern id="schedule-grid" width="42.8" height="11.4" patternUnits="userSpaceOnUse">
+                    <path d="M 42.8 0 L 0 0 0 11.4" fill="none" stroke="#f3f4f6" strokeWidth="0.5"/>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#schedule-grid)" />
                 
-                {/* 시간대별 그리드 */}
-                {Array.from({ length: 6 }, (_, hour) => (
-                  <React.Fragment key={hour}>
-                    {Array.from({ length: 7 }, (_, day) => {
-                      const schedule = scheduleData.find(s => {
-                        const dayMap = ['월', '화', '수', '목', '금', '토', '일']
-                        const timeStart = parseInt(s.time.split('-')[0].split(':')[0])
-                        const timeEnd = parseInt(s.time.split('-')[1].split(':')[0])
-                        return dayMap[day] === s.day && hour >= timeStart - 9 && hour < timeEnd - 9
-                      })
-                      
-                      return (
-                        <div 
-                          key={`${hour}-${day}`}
-                          className={`border rounded text-center flex items-center justify-center text-white text-xs ${
-                            schedule ? schedule.color : 'bg-gray-100'
-                          }`}
-                          style={{ height: 'calc(100% / 7)' }}
-                        >
-                          {schedule && hour === parseInt(schedule.time.split('-')[0].split(':')[0]) - 9 ? 
-                            schedule.subject.split(' ')[0] : ''
-                          }
-                        </div>
-                      )
-                    })}
-                  </React.Fragment>
+                {/* 요일 헤더 */}
+                {['월', '화', '수', '목', '금', '토', '일'].map((day, index) => (
+                  <text
+                    key={day}
+                    x={21.4 + (index * 42.8)}
+                    y="8"
+                    textAnchor="middle"
+                    className="text-xs font-semibold fill-gray-600"
+                  >
+                    {day}
+                  </text>
                 ))}
-              </div>
+                
+                {/* 시간표 블록들 */}
+                {scheduleData.map((schedule, index) => {
+                  const dayMap = ['월', '화', '수', '목', '금', '토', '일']
+                  const dayIndex = dayMap.indexOf(schedule.day)
+                  const timeStart = parseInt(schedule.time.split('-')[0].split(':')[0])
+                  const timeEnd = parseInt(schedule.time.split('-')[1].split(':')[0])
+                  const startHour = timeStart - 9
+                  const endHour = timeEnd - 9
+                  
+                  const x = 21.4 + (dayIndex * 42.8)
+                  const y = 15 + (startHour * 8)
+                  const width = 35
+                  const height = (endHour - startHour) * 8
+                  
+                  return (
+                    <rect
+                      key={index}
+                      x={x - width/2}
+                      y={y}
+                      width={width}
+                      height={height}
+                      fill={schedule.color.replace('bg-', '#').replace('blue-500', '#3b82f6').replace('red-500', '#ef4444').replace('green-500', '#10b981').replace('purple-500', '#8b5cf6')}
+                      rx="2"
+                    />
+                  )
+                })}
+              </svg>
             </div>
             
             <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
