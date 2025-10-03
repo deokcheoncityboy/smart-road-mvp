@@ -180,17 +180,48 @@ export default function ProfilePage() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {/* 간단한 차트 시각화 */}
-              <div className="h-32 flex items-end justify-between gap-1">
-                {gpaHistory.map((item, index) => (
-                  <div key={index} className="flex flex-col items-center gap-1">
-                    <div 
-                      className="w-6 bg-orange-600 rounded-t"
-                      style={{ height: `${(item.gpa / 4.5) * 100}px` }}
-                    ></div>
-                    <span className="text-xs text-gray-500">{item.gpa}</span>
-                  </div>
-                ))}
+              {/* 꺾은선 그래프 */}
+              <div className="h-24 relative">
+                <svg className="w-full h-full" viewBox="0 0 300 80">
+                  {/* 격자선 */}
+                  <defs>
+                    <pattern id="grid" width="30" height="16" patternUnits="userSpaceOnUse">
+                      <path d="M 30 0 L 0 0 0 16" fill="none" stroke="#f3f4f6" strokeWidth="0.5"/>
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#grid)" />
+                  
+                  {/* 꺾은선 그래프 */}
+                  <polyline
+                    fill="none"
+                    stroke="#ea580c"
+                    strokeWidth="2"
+                    points={gpaHistory.map((item, index) => 
+                      `${30 + (index * 30)},${60 - ((item.gpa - 2) / 2.5) * 50}`
+                    ).join(' ')}
+                  />
+                  
+                  {/* 데이터 포인트 */}
+                  {gpaHistory.map((item, index) => (
+                    <circle
+                      key={index}
+                      cx={30 + (index * 30)}
+                      cy={60 - ((item.gpa - 2) / 2.5) * 50}
+                      r="3"
+                      fill="#ea580c"
+                    />
+                  ))}
+                  
+                  {/* 최고점 강조 */}
+                  <circle
+                    cx={30 + (6 * 30)}
+                    cy={60 - ((4.24 - 2) / 2.5) * 50}
+                    r="4"
+                    fill="#ea580c"
+                    stroke="white"
+                    strokeWidth="2"
+                  />
+                </svg>
               </div>
               <div className="text-center">
                 <span className="text-sm text-gray-600">평균 학점: {studentInfo.gpa}</span>
@@ -211,18 +242,18 @@ export default function ProfilePage() {
         <CardContent>
           <div className="space-y-4">
             {/* 시간표 그리드 */}
-            <div className="grid grid-cols-7 gap-2 text-xs">
+            <div className="grid grid-cols-7 gap-1 text-xs">
               {/* 요일 헤더 */}
-              <div className="text-center font-semibold text-gray-600">월</div>
-              <div className="text-center font-semibold text-gray-600">화</div>
-              <div className="text-center font-semibold text-gray-600">수</div>
-              <div className="text-center font-semibold text-gray-600">목</div>
-              <div className="text-center font-semibold text-gray-600">금</div>
-              <div className="text-center font-semibold text-gray-600">토</div>
-              <div className="text-center font-semibold text-gray-600">일</div>
+              <div className="text-center font-semibold text-gray-600 py-1">월</div>
+              <div className="text-center font-semibold text-gray-600 py-1">화</div>
+              <div className="text-center font-semibold text-gray-600 py-1">수</div>
+              <div className="text-center font-semibold text-gray-600 py-1">목</div>
+              <div className="text-center font-semibold text-gray-600 py-1">금</div>
+              <div className="text-center font-semibold text-gray-600 py-1">토</div>
+              <div className="text-center font-semibold text-gray-600 py-1">일</div>
               
               {/* 시간대별 그리드 */}
-              {Array.from({ length: 10 }, (_, hour) => (
+              {Array.from({ length: 8 }, (_, hour) => (
                 <React.Fragment key={hour}>
                   {Array.from({ length: 7 }, (_, day) => {
                     const schedule = scheduleData.find(s => {
@@ -235,7 +266,7 @@ export default function ProfilePage() {
                     return (
                       <div 
                         key={`${hour}-${day}`}
-                        className={`h-8 border rounded text-center flex items-center justify-center text-white text-xs ${
+                        className={`h-5 border rounded text-center flex items-center justify-center text-white text-xs ${
                           schedule ? schedule.color : 'bg-gray-100'
                         }`}
                       >
