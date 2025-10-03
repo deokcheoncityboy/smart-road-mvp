@@ -357,7 +357,7 @@ export default function ProfilePage() {
                 <div key={index} className="border rounded-lg p-4 hover:bg-gray-50">
                   <div className="space-y-2">
                     <h4 className="font-semibold text-gray-700 text-sm">{program.title}</h4>
-                    <div className="grid grid-cols-4 gap-2 text-xs">
+                    <div className="grid grid-cols-4 gap-2 text-sm">
                       <div>
                         <span className="text-gray-500">주최:</span>
                         <div className="font-semibold">{program.organizer}</div>
@@ -398,7 +398,7 @@ export default function ProfilePage() {
                 <div key={index} className="border rounded-lg p-4 hover:bg-gray-50">
                   <div className="space-y-2">
                     <h4 className="font-semibold text-gray-700 text-sm">{program.title}</h4>
-                    <div className="grid grid-cols-4 gap-2 text-xs">
+                    <div className="grid grid-cols-4 gap-2 text-sm">
                       <div>
                         <span className="text-gray-500">주최:</span>
                         <div className="font-semibold">{program.organizer}</div>
